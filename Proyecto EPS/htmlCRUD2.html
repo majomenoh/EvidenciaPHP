@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('https://c4.wallpaperflare.com/wallpaper/461/728/993/download-nature-for-pc-1920x1080-wallpaper-preview.jpg'); /* Ruta de la imagen */
+            background-size: cover;                         /* Para que la imagen cubra toda la pantalla */
+            background-position: center;                    /* Para centrar la imagen */
+            background-repeat: no-repeat;                   /* Para evitar que la imagen se repita */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="w-full max-w-md bg-white rounded-lg shadow-md p-8">
+        <h2 class="text-2xl font-semibold text-gray-800 text-center mb-6">Productos</h2>
+        <form action="metodosCRUD2.php" method="POST">
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="numero_producto">Número ID de Producto</label>
+                <input 
+                    type="number" 
+                    name="numero_id_producto" 
+                    id="numero_id_producto" 
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="Ingrese el número id del Producto">
+            </div>
+            
+            <!-- Nombre de Producto -->
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="nombre_producto">Nombre de Producto</label>
+                <input 
+                    type="text" 
+                    name="nombre_producto" 
+                    id="nombre_producto" 
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="Ingrese el nombre del Producto">
+            </div>
+            
+            <!-- Lote del Producto -->
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="lote_producto">Lote del Producto</label>
+                <input 
+                    type="text" 
+                    name="lote_producto" 
+                    id="lote_producto" 
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="Ingrese el lote del Producto">
+            </div>
+            
+            <!-- Valor del Producto -->
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="valor_producto">Valor</label>
+                <input 
+                    type="number" 
+                    name="valor_producto" 
+                    id="valor_producto" 
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="Ingrese el valor del Producto">
+            </div>
+            
+            <!-- Botones CRUD -->
+            <div class="grid grid-cols-2 gap-4">
+                <button 
+                    type="submit" 
+                    name="accion" 
+                    value="create" 
+                    class="w-full bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none">
+                    Crear
+                </button>
+                <button 
+                    type="submit" 
+                    name="accion" 
+                    value="read" 
+                    class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none">
+                    Buscar
+                </button>
+                <button 
+                    type="submit" 
+                    name="accion" 
+                    value="update" 
+                    class="w-full bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded focus:outline-none">
+                    Actualizar
+                </button>
+                <button 
+                    type="submit" 
+                    name="accion" 
+                    value="delete" 
+                    class="w-full bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none">
+                    Eliminar
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
